@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Local Registration Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/kkn1234/create}" th:object="${user}"
+		method="post">
+		<div>
+
+			<h2>Personal Information</h2>
+
+			<div>
+				<div>
+					<label><em>*</em>First Name</label>
+					<div>
+						<input type="text" th:field="*{firstName}" id="firstName"
+							name="firstName" title="First Name" maxlength="255"
+							required="required" />
+					</div>
+				</div>
+				<div>
+					<label><em>*</em>Last Name</label>
+					<div>
+						<input type="text" th:field="*{lastName}" id="lastName"
+							name="lastName" title="Last Name" maxlength="255"
+							required="required" />
+					</div>
+				</div>
+			</div>
+
+			<label><em>*</em>Email Address</label>
+			<div>
+				<input type="text" name="email" id="email" title="Email Address"
+					th:field="*{email}" required="required" />
+			</div>
+		</div>
+		<div>
+			<h2>Login Information</h2>
+
+			<div>
+				<label><em>*</em>Password</label>
+				<div class="input-box">
+					<input type="password" name="password" id="password"
+						title="Password" th:field="*{password}" required="required" />
+				</div>
+			</div>
+			<div>
+				<label><em>*</em>Confirm Password</label>
+				<div>
+					<input type="password" name="confirmation" title="Confirm Password"
+						id="confirmation" th:field="*{confirmation}" required="required" />
+				</div>
+			</div>
+			<div>
+				<p class="required">* Required Fields</p>
+				<input type="submit" value="Submit" />
+			</div>
+		</div>
+
+	</form>
+</body>
+</html>
